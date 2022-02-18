@@ -7,13 +7,13 @@ OMB 6
 Course: PRIMA
 Docent: Prof. Dipl.-Ing. Jirka Dell'Oro-Friedl, HFU
 
-[live](https://attinger.github.io/bomberman-game/) \
-[source code](https://github.com/Attinger/bomberman-game) \
-[design](https://github.com/Attinger/bomberman-game/blob/main/design/Designdoc.pdf) 
+[You want to play?](https://attinger.github.io/bomberman-game/) \
+[Sourcecode](https://github.com/Attinger/bomberman-game) \
+[design(german only)](https://github.com/Attinger/bomberman-game/blob/main/design/Designdoc.pdf) 
 
 ## Description
 I think everyone knows the game i tried to rebuild - Bomberman. 
-You have to fight against three bots who are placing bombs around the map. Can you survive and destroy every possible block to win the game?
+You have to fight against three bots who are placing bombs around the map. Can you survive and destroy every possible block?
 
 ### Controls
 **Movement:** W, A, S, D / Arrow-keys  (to move around)/ Space (to place a Bomb)
