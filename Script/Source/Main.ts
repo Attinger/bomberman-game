@@ -101,7 +101,7 @@ namespace Bomberman {
 
   async function fetchData() {
     try {
-      const response = await fetch("../mapsize.json");
+      const response = await fetch("../bomberman-game/mapsize.json");
       const responseObj = await response.json();
       return responseObj;
     } catch(error) {
