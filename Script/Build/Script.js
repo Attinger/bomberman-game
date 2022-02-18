@@ -358,7 +358,7 @@ var Bomberman;
     ;
     async function fetchData() {
         try {
-            const response = await fetch("./Script/Source/mapsize.json");
+            const response = await fetch("mapsize.json");
             const responseObj = await response.json();
             return responseObj;
         }
