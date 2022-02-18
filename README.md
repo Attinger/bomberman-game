@@ -7,9 +7,9 @@ OMB 6
 Course: PRIMA
 Docent: Prof. Dipl.-Ing. Jirka Dell'Oro-Friedl, HFU
 
-[you want to play?](https://attinger.github.io/bomberman-game/) \
-[sourcecode](https://github.com/Attinger/bomberman-game) \
-[design(german only)](https://github.com/Attinger/bomberman-game/blob/main/design/Designdoc.pdf) 
+[Pages - Link](https://attinger.github.io/bomberman-game/) \
+[Link to sourcecode](https://github.com/Attinger/bomberman-game) \
+[Link to design doc(german only)](https://github.com/Attinger/bomberman-game/blob/main/design/Designdoc.pdf) 
 
 ## Description
 I think everyone knows the game i tried to rebuild - Bomberman. 
