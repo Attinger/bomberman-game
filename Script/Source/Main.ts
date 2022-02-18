@@ -60,7 +60,7 @@ namespace Bomberman {
     f.Debug.log("Audio:", f.AudioManager.default);
 
     f.Loop.addEventListener(f.EVENT.LOOP_FRAME, update);
-    viewport.physicsDebugMode = f.PHYSICS_DEBUGMODE.COLLIDERS;
+   // viewport.physicsDebugMode = f.PHYSICS_DEBUGMODE.COLLIDERS;
     f.Loop.start(f.LOOP_MODE.TIME_REAL, 60);  // start the game loop to continously draw the viewport, update the audiosystem and drive the physics i/a
   }
 
