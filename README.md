@@ -1,11 +1,11 @@
 # Bomberman - Prototype
 
-Kevin Attinger  
+Attinger, Kevin 
 WS 2021/2022
 OMB 6
 
 Course: PRIMA
-Docent: Prof. Dipl.-Ing. Jirka R. Dell'Oro-Friedl, HFU
+Docent: Prof. Dipl.-Ing. Jirka Dell'Oro-Friedl, HFU
 
 [live](https://attinger.github.io/bomberman-game/) \
 [source code](https://github.com/Attinger/bomberman-game) \
