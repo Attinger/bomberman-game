@@ -13,12 +13,8 @@ namespace Bomberman {
             const cmpTransform = new f.ComponentTransform;
 
             let bombTexture: f.TextureImage = new f.TextureImage();
-            bombTexture.load("../assets/bomb.png");
+            bombTexture.load("./assets/bomb.png");
             let bombCoat: f.CoatTextured = new f.CoatTextured(new f.Color(255,255,255,255), bombTexture);
-
-            let explosionTexture: f.TextureImage = new f.TextureImage();
-            explosionTexture.load("../assets/explosion.png");
-
 
             this.addComponent(new f.ComponentMesh(new f.MeshCube("MeshBombX")));
             this.addComponent(new f.ComponentMaterial(new f.Material("Texture",f.ShaderTextureFlat,bombCoat)));

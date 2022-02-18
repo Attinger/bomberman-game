@@ -28,7 +28,6 @@ namespace Bomberman {
 
       public static get(): ƒAid.StateMachineInstructions<JOB> {
         let setup: ƒAid.StateMachineInstructions<JOB> = new ƒAid.StateMachineInstructions();
-        //setup.setAction(JOB.START, <f.General>this.actStart);
         setup.setAction(JOB.START, <f.General>this.actStart);
         setup.setAction(JOB.NEXT, <f.General>this.actNextMove);
         setup.setAction(JOB.PLACEBOMB, <f.General>this.actPlacebomb);
@@ -46,7 +45,6 @@ namespace Bomberman {
        _machine.node.body.collisions.forEach(element => {
           switch (element.node.name) {
             case "DBlock":
-              //console.log('DBBLOCK');
               _machine.transit(JOB.PLACEBOMB);
               break;
 
@@ -72,7 +70,6 @@ namespace Bomberman {
       private static  actPlacebomb(_machine: StateMachine): void{
         const nodePos: f.Vector3 = _machine.node.body.getPosition();
         _machine.node.body.setPosition(new f.Vector3(Math.round(nodePos.x), nodePos.y, Math.round(nodePos.z)));
-        //console.log(nodePos.y);
         const node: Npc = <Npc>_machine.node;
         node.placeBomb();
         _machine.transit(JOB.TURN);
@@ -105,13 +102,9 @@ namespace Bomberman {
       }
 
       private update = (_event: Event): void => {
-        //this.node.body.applyForce(this.rotation);
         this.act();
       }
 
-      public handleCollisionEnter(_event: f.EventPhysics): void {
-        //console.log(_event.cmpRigidbody.node.name);
-      }
 
       // protected reduceMutator(_mutator: ƒ.Mutator): void {
       //   // delete properties that should not be mutated

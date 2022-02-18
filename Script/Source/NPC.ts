@@ -3,7 +3,6 @@ namespace Bomberman {
   
     export class Npc extends f.Node {
         public body;
-        //private direction: f.Vector3;
         public canPlaceBomb: boolean;
         public npcDirection: f.Vector3;
         public npcRotation: f.Vector3;
@@ -36,7 +35,6 @@ namespace Bomberman {
 
             this.body = new f.ComponentRigidbody(1,f.BODY_TYPE.DYNAMIC, f.COLLIDER_TYPE.CUBE, f.COLLISION_GROUP.DEFAULT, cmpTransform.mtxLocal);
             this.body.initialization = f.BODY_INIT.TO_MESH;
-            this.body.addEventListener(f.EVENT_PHYSICS.COLLISION_ENTER, this.handleCollisionEnter);
             this.addComponent(this.body);
             this.addComponent(new StateMachine); 
 
@@ -86,21 +84,5 @@ namespace Bomberman {
         private update = (_event: Event): void => {
             this.body.setRotation(this.npcRotation);
         }
-
-        public handleCollisionEnter(_event: f.EventPhysics): void {
-            console.log(_event.cmpRigidbody.node.name);
-            //this.collisions.forEach( (element: any) => {
-                //console.log(element);
-               // this.direction = ƒ.Vector3.DIFFERENCE(element.node.getComponent(f.Component).mtxWorld.translation, this.node.getComponent(f.ComponentTransform).mtxWorld.translation);
-               // if(element.node.name === 'Wall') {
-                   // this.direction = -this.direction;
-                //}
-               // console.log(this.direction)
-            //});
-        }
-
-        //public update = (_event: Event) => {
-            //this.body.applyForce(new f.Vector3(this.direction));
-        //}
     }
 }

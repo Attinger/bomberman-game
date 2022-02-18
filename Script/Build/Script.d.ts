@@ -95,11 +95,9 @@ declare namespace Bomberman {
         placeBomb(): void;
         timeOut(): Promise<void>;
         private update;
-        handleCollisionEnter(_event: f.EventPhysics): void;
     }
 }
 declare namespace Bomberman {
-    import f = FudgeCore;
     import ƒAid = FudgeAid;
     enum JOB {
         START = 0,
@@ -119,7 +117,6 @@ declare namespace Bomberman {
         private static actTurn;
         private hndEvent;
         private update;
-        handleCollisionEnter(_event: f.EventPhysics): void;
     }
     export {};
 }

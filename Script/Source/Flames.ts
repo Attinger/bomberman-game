@@ -14,7 +14,7 @@ namespace Bomberman {
             const cmpTransform: f.ComponentTransform = new f.ComponentTransform;
 
             let explosionTexture: f.TextureImage = new f.TextureImage();
-            explosionTexture.load("../assets/explosion.png");
+            explosionTexture.load("./assets/explosion.png");
             let explosionCoat: f.CoatTextured = new f.CoatTextured(new f.Color(255,255,255,255), explosionTexture);
             this.addComponent(new f.ComponentMesh(new f.MeshCube("MeshFlameX")));
             this.addComponent(new f.ComponentMaterial(new f.Material("Texture",f.ShaderTextureFlat,explosionCoat)));

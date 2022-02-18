@@ -141,10 +141,8 @@ var Bomberman;
             let bombTimer = 1000;
             const cmpTransform = new f.ComponentTransform;
             let bombTexture = new f.TextureImage();
-            bombTexture.load("../assets/bomb.png");
+            bombTexture.load("./assets/bomb.png");
             let bombCoat = new f.CoatTextured(new f.Color(255, 255, 255, 255), bombTexture);
-            let explosionTexture = new f.TextureImage();
-            explosionTexture.load("../assets/explosion.png");
             this.addComponent(new f.ComponentMesh(new f.MeshCube("MeshBombX")));
             this.addComponent(new f.ComponentMaterial(new f.Material("Texture", f.ShaderTextureFlat, bombCoat)));
             this.addComponent(cmpTransform);
@@ -229,7 +227,7 @@ var Bomberman;
             let flameTimer = 1000;
             const cmpTransform = new f.ComponentTransform;
             let explosionTexture = new f.TextureImage();
-            explosionTexture.load("../assets/explosion.png");
+            explosionTexture.load("./assets/explosion.png");
             let explosionCoat = new f.CoatTextured(new f.Color(255, 255, 255, 255), explosionTexture);
             this.addComponent(new f.ComponentMesh(new f.MeshCube("MeshFlameX")));
             this.addComponent(new f.ComponentMaterial(new f.Material("Texture", f.ShaderTextureFlat, explosionCoat)));
@@ -451,7 +449,6 @@ var Bomberman;
     var f = FudgeCore;
     class Npc extends f.Node {
         body;
-        //private direction: f.Vector3;
         canPlaceBomb;
         npcDirection;
         npcRotation;
@@ -471,7 +468,6 @@ var Bomberman;
             this.getComponent(f.ComponentTransform).mtxLocal.mutate({ translation: npcPosition, });
             this.body = new f.ComponentRigidbody(1, f.BODY_TYPE.DYNAMIC, f.COLLIDER_TYPE.CUBE, f.COLLISION_GROUP.DEFAULT, cmpTransform.mtxLocal);
             this.body.initialization = f.BODY_INIT.TO_MESH;
-            this.body.addEventListener("ColliderEnteredCollision" /* COLLISION_ENTER */, this.handleCollisionEnter);
             this.addComponent(this.body);
             this.addComponent(new Bomberman.StateMachine);
             f.Loop.addEventListener("loopFrame" /* LOOP_FRAME */, this.update);
@@ -513,17 +509,6 @@ var Bomberman;
         update = (_event) => {
             this.body.setRotation(this.npcRotation);
         };
-        handleCollisionEnter(_event) {
-            console.log(_event.cmpRigidbody.node.name);
-            //this.collisions.forEach( (element: any) => {
-            //console.log(element);
-            // this.direction = ƒ.Vector3.DIFFERENCE(element.node.getComponent(f.Component).mtxWorld.translation, this.node.getComponent(f.ComponentTransform).mtxWorld.translation);
-            // if(element.node.name === 'Wall') {
-            // this.direction = -this.direction;
-            //}
-            // console.log(this.direction)
-            //});
-        }
     }
     Bomberman.Npc = Npc;
 })(Bomberman || (Bomberman = {}));
@@ -556,7 +541,6 @@ var Bomberman;
         }
         static get() {
             let setup = new ƒAid.StateMachineInstructions();
-            //setup.setAction(JOB.START, <f.General>this.actStart);
             setup.setAction(JOB.START, this.actStart);
             setup.setAction(JOB.NEXT, this.actNextMove);
             setup.setAction(JOB.PLACEBOMB, this.actPlacebomb);
@@ -572,7 +556,6 @@ var Bomberman;
             _machine.node.body.collisions.forEach(element => {
                 switch (element.node.name) {
                     case "DBlock":
-                        //console.log('DBBLOCK');
                         _machine.transit(JOB.PLACEBOMB);
                         break;
                     case "Wall":
@@ -593,7 +576,6 @@ var Bomberman;
         static actPlacebomb(_machine) {
             const nodePos = _machine.node.body.getPosition();
             _machine.node.body.setPosition(new f.Vector3(Math.round(nodePos.x), nodePos.y, Math.round(nodePos.z)));
-            //console.log(nodePos.y);
             const node = _machine.node;
             node.placeBomb();
             _machine.transit(JOB.TURN);
@@ -622,12 +604,8 @@ var Bomberman;
             }
         };
         update = (_event) => {
-            //this.node.body.applyForce(this.rotation);
             this.act();
         };
-        handleCollisionEnter(_event) {
-            //console.log(_event.cmpRigidbody.node.name);
-        }
     }
     Bomberman.StateMachine = StateMachine;
 })(Bomberman || (Bomberman = {}));
