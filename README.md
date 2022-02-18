@@ -9,7 +9,7 @@ Docent: Prof. Dipl.-Ing. Jirka R. Dell'Oro-Friedl, HFU
 
 [live](https://attinger.github.io/bomberman-game/) \
 [source code](https://github.com/Attinger/bomberman-game) \
-[design](https://github.com/Attinger/bomberman-game/design.pdf) 
+[design](https://github.com/Attinger/bomberman-game/design/Designdokument,Attinger,Kevin.pdf) 
 
 ## Description
 I think everyone knows the game i tried to rebuild - Bomberman. 
