@@ -12,7 +12,7 @@ Docent: Prof. Dipl.-Ing. Jirka R. Dell'Oro-Friedl, HFU
 [design](https://github.com/Attinger/bomberman-game/design.pdf) 
 
 ## Description
-I think everyone knows it, a attempt to rebuild the game Bomberman. 
+I think everyone knows the game i tried to rebuild - Bomberman. 
 You have to fight against three bots who are placing bombs around the map. Can you survive and destroy every possible block to win the game?
 
 ### Controls
