@@ -19,12 +19,12 @@ You have to fight against three bots who are placing bombs around the map. Can y
 **Movement:** W, A, S, D / Arrow-keys  (to move around)/ Space (to place a Bomb)
 
 ## Checklist for the final assignment
-| Nr | Criterion       | Explanation                                                                                                              |
-|---:|-------------------|---------------------------------------------------------------------------------------------------------------------|
+| Nr | Criterion            | Explanation                                                                                                              |
+|---:|-------------------  |---------------------------------------------------------------------------------------------------------------------|
 |  0 | Units and Positions |Every block has a width and height of 1; the Agent and the NPCs are half of that aswell as the bombs. Flames are 1 in every direction aswell so
 it would be easy to implement bigger flames in the future.|
-|  1 | Hierarchy         | A screenshot of the Hierarchy can be found in the Design Document (linked above).|
-|  2 | Editor            | I used the Editor to create only one 1x1 Block which builds my base. Everything else is added via Code because the Mapsize can be modified by a user which i will explain on 8) External data.|
+|  1 | Hierarchy           | A screenshot of the Hierarchy can be found in the Design Document (linked above).|
+|  2 | Editor              | I used the Editor to create only one 1x1 Block which builds my base. Everything else is added via Code because the Mapsize can be modified by a user which i will explain on 8) External data.|
 |  3 | Scriptcomponents  | My agent has a Scriptcomponent which controls things like movement or movement speed in gernal.|
 |  4 | Extend            |Agent, Bomb, NPC, Flames inherit from f.Node to provide the functionality of adding components and graph placement|
 |  5 | Sound             | My game has different Hit markers one for the Agent, one for the NPCs. Also if a bomb explodes it will return a Sound.|
