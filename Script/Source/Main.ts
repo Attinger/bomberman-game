@@ -52,7 +52,7 @@ namespace Bomberman {
 
     let cmpListener = new f.ComponentAudioListener();
 
-    //root.addComponent(new f.ComponentAudio(new f.Audio("../sound/theme-song.mp3"), true, true));
+    //root.addComponent(new f.ComponentAudio(new f.Audio("./sound/theme-song.mp3"), true, true));
 
     f.AudioManager.default.listenWith(cmpListener);
     f.AudioManager.default.listenTo(root);
@@ -187,7 +187,6 @@ namespace Bomberman {
   function createBomb() {
     canPlaceBomb = false;
     let agentPos = agent.mtxWorld.translation;
-    agent.addComponent(new f.ComponentAudio(new f.Audio("../sound/hit.mp3"), false, true));
     bombNode = root.getChildrenByName("Bomb")[0];
     bomb = new Bomb(agentPos.x, agentPos.y, agentPos.z);
     bombNode.addChild(bomb);

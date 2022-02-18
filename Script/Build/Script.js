@@ -316,7 +316,7 @@ var Bomberman;
         await scaleMap();
         //initBomb();
         let cmpListener = new f.ComponentAudioListener();
-        //root.addComponent(new f.ComponentAudio(new f.Audio("../sound/theme-song.mp3"), true, true));
+        //root.addComponent(new f.ComponentAudio(new f.Audio("./sound/theme-song.mp3"), true, true));
         f.AudioManager.default.listenWith(cmpListener);
         f.AudioManager.default.listenTo(Bomberman.root);
         f.AudioManager.default.volume = 0.5;
@@ -434,7 +434,6 @@ var Bomberman;
     function createBomb() {
         canPlaceBomb = false;
         let agentPos = Bomberman.agent.mtxWorld.translation;
-        Bomberman.agent.addComponent(new f.ComponentAudio(new f.Audio("../sound/hit.mp3"), false, true));
         Bomberman.bombNode = Bomberman.root.getChildrenByName("Bomb")[0];
         Bomberman.bomb = new Bomberman.Bomb(agentPos.x, agentPos.y, agentPos.z);
         Bomberman.bombNode.addChild(Bomberman.bomb);
