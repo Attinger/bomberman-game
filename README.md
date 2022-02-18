@@ -7,8 +7,8 @@ OMB 6
 Course: PRIMA
 Docent: Prof. Dipl.-Ing. Jirka Dell'Oro-Friedl, HFU
 
-[You want to play?](https://attinger.github.io/bomberman-game/) \
-[Sourcecode](https://github.com/Attinger/bomberman-game) \
+[you want to play?](https://attinger.github.io/bomberman-game/) \
+[sourcecode](https://github.com/Attinger/bomberman-game) \
 [design(german only)](https://github.com/Attinger/bomberman-game/blob/main/design/Designdoc.pdf) 
 
 ## Description
