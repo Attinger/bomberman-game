@@ -26,6 +26,7 @@ var Bomberman;
             const flamePos = new f.Vector3(_event.data.x, _event.data.y, _event.data.z);
             if (flamePos.equals(this.mtxWorld.translation, 0.5)) {
                 Bomberman.GameState.get().agentHealth -= 1;
+                Bomberman.agent.addComponent(new f.ComponentAudio(new f.Audio("./sound/hit.mp3"), false, true));
                 if (Bomberman.GameState.get().agentHealth == 0) {
                     Bomberman.GameState.get().gameOver();
                 }
@@ -153,7 +154,7 @@ var Bomberman;
             this.getComponent(f.ComponentMesh).mtxPivot.scaleZ(0.5);
             setTimeout(() => {
                 this.removeComponent(this.getComponent(f.ComponentMaterial));
-                Bomberman.agent.addComponent(new f.ComponentAudio(new f.Audio("../sound/explosion-sound.wav"), false, true));
+                Bomberman.agent.addComponent(new f.ComponentAudio(new f.Audio("./sound/explosion-sound.wav"), false, true));
                 for (let i = 1; i <= 1; i++) {
                     this.addChild(new Bomberman.Flames(i, 0, 0, this.mtxWorld.translation));
                     this.addChild(new Bomberman.Flames(-i, 0, 0, this.mtxWorld.translation));
@@ -323,7 +324,7 @@ var Bomberman;
         f.AudioManager.default.volume = 0.5;
         f.Debug.log("Audio:", f.AudioManager.default);
         f.Loop.addEventListener("loopFrame" /* LOOP_FRAME */, update);
-        viewport.physicsDebugMode = f.PHYSICS_DEBUGMODE.COLLIDERS;
+        // viewport.physicsDebugMode = f.PHYSICS_DEBUGMODE.COLLIDERS;
         f.Loop.start(f.LOOP_MODE.TIME_REAL, 60); // start the game loop to continously draw the viewport, update the audiosystem and drive the physics i/a
     }
     function buildViewPort() {
@@ -357,7 +358,7 @@ var Bomberman;
     ;
     async function fetchData() {
         try {
-            const response = await fetch("../mapsize.json");
+            const response = await fetch("./Script/Source/mapsize.json");
             const responseObj = await response.json();
             return responseObj;
         }
