@@ -2,7 +2,7 @@
 
 Kevin Attinger  
 WS 2021/2022
-OMB 7
+OMB 6
 
 Course: PRIMA
 Docent: Prof. Dipl.-Ing. Jirka R. Dell'Oro-Friedl, HFU
